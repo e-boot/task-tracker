@@ -36,26 +36,50 @@ const args = process.argv.slice(3);
 
     switch (command) {
         case 'add':
+            if (!args[0]) {
+                console.log("Error: Task description is required.");
+                showUsage();
+                process.exit(1);
+            }
             taskManager.addTask(args[0]);
             break;
         case 'list':
             taskManager.listTasks();
             break;
         case 'update':
-            taskManager.updateTask(args[0], args[1]);
+            if (!args[0] || !args[1]) {
+                console.log("Error: Task ID and description are required.");
+                showUsage();
+                process.exit(1);
+            }
+            taskManager.updateTask(args[0], args[1], args[2]);
             break;
         case 'delete':
+            if (!args[0]) {
+                console.log("Error: Task ID is required.");
+                showUsage();
+                process.exit(1);
+            }
             taskManager.deleteTask(args[0]);
             break;
         case 'mark-in-progress':
+            if (!args[0]) {
+                console.log("Error: Task ID is required.");
+                showUsage();
+                process.exit(1);
+            }
             taskManager.markInProgress(args[0]);
             break;
         case 'mark-done':
+            if (!args[0]) {
+                console.log("Error: Task ID is required.");
+                showUsage();
+                process.exit(1);
+            }
             taskManager.markDone(args[0]);
             break;
         default:
             console.log('Unknown command');
             showUsage();
     }
-
 
