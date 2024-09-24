@@ -2,7 +2,7 @@
 export default class Task {
     static idCounter = 0;
 
-    constructor( description, status){
+    constructor( description, status="todo"){
         this.id =Task.generateId();
         this.description = description;
         this.status = status;
@@ -31,7 +31,7 @@ export default class Task {
     }
 
     display(){
-    return `Task ID: ${this.id}, Description: ${this.description}, Status: ${this.status}, created at: ${this.createdAt}, updated at: ${this.updatedAt}`;
+    return `Task ID:${this.id}; Status: ${this.status};\nDescription: ${this.description};\ncreated at: ${this.createdAt}; updated at: ${this.updatedAt};\n   `;
     }
 
 
