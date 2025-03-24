@@ -1,9 +1,26 @@
-[
-  {
-    "id": 1,
-    "description": "seconweqeawdasd note",
-    "status": "todo",
-    "createdAt": "24/09/2024",
-    "updatedAt": "24/09/2024"
-  }
-]
+{
+  "tasks": [
+    {
+      "id": 1,
+      "description": "read docs",
+      "status": "done",
+      "createdAt": "24/03/2025",
+      "updatedAt": "24/03/2025"
+    },
+    {
+      "id": 3,
+      "description": "push changes to github",
+      "status": "in-progress",
+      "createdAt": "24/03/2025",
+      "updatedAt": "24/03/2025"
+    },
+    {
+      "id": 6,
+      "description": "see a movie",
+      "status": "todo",
+      "createdAt": "24/03/2025",
+      "updatedAt": "24/03/2025"
+    }
+  ],
+  "idCounter": 18
+}

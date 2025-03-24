@@ -1,14 +1,15 @@
 import Task from './Task.js';
-import TaskPersistence from './TaskPersistense.js';
+import TaskPersistence from './TaskPersistence.js';
 
 export default class TaskManager {
     constructor(filePath) {
         this.persistence = new TaskPersistence(filePath);
         this.tasks = this.persistence.loadTasks(); // Load tasks when initializing
     }
+
     addTask(description) {
         const newTask = new Task(description);
-    this.tasks.push(newTask);
+        this.tasks.push(newTask);
         this.persistence.saveTasks(this.tasks);
         console.log(`Task added successfully: ${description}`);
     }
